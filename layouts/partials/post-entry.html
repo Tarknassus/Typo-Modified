@@ -1,0 +1,25 @@
+<div class="post-line">
+
+    {{ $dateFormat := "02/01/2006"}}
+    {{ with .Site.Params.listDateFormat }}
+    {{ $dateFormat = .}}
+    {{ end }}
+
+    <p class="line-date">{{ .Date | time.Format $dateFormat }}</p>
+
+    <div>
+        <p class="line-title">
+            {{ if .Draft }}<span style="color: var(--col5a); font-weight: 600; text-decoration: underline overline; text-decoration-thickness: 4px; text-underline-offset: 2px;">DRAFT</span> - {{ end }}
+            <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+            </a>
+        </p>
+
+        {{ if .Site.Params.listSummaries }}
+            {{ if .Summary }}
+        <p class="line-summary"> {{ .Summary }} </p>
+            {{ else }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

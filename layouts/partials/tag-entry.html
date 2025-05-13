@@ -1,0 +1,8 @@
+<div class="tag-line">
+    <div>
+        <p class="tag-title">
+            {{ $count := .Pages.Len }}
+            <a href="{{ .RelPermalink }}">#{{ .Title }}</a> <span class="listCount">({{ $count }} article{{ if gt $count 1}}s{{ end }})</span>
+        </p>
+    </div>
+</div>

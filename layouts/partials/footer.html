@@ -1,0 +1,15 @@
+{{ $showFooter := default true .Site.Params.showFooter }}
+{{ if $showFooter }}
+    <p>&copy;2018-{{ now.Year }} 
+        <span class="h-card">
+            <a class="p-name u-url" href="https://richardcheesman.com/">Richard Cheesman</a>
+        </span>
+        <br /><span class="smaller">Powered by<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> Uses a modified version of typo theme by <a href="https://github.com/tomfran/typo" target="_blank" rel="noopener">tomfran</a></span> <span class="smaller">Cookies? Tracking? Nah, we don't do that garbage here.</span>
+    </p>
+    {{ if not .Site.Params.footerContent }}
+    {{ end }}
+    
+    {{ with .Site.Params.footerContent }}
+    <p>{{ . | markdownify }}</p>
+    {{ end }}
+{{ end }}

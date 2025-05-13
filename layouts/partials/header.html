@@ -1,0 +1,30 @@
+{{/* Header */}}
+
+<div class="header">
+
+    {{ if or (not (.Param "hideHeader")) .IsHome }}
+
+    <h1 class="header-title">
+        <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
+    </h1>
+    {{ $currentPage := . }}
+    {{ $section := $currentPage.Section | humanize }}
+
+
+    <div class="flex">
+
+        {{ range .Site.Menus.main }}
+
+    
+        <p class="site-menu">
+            <a href="{{ .URL }}" {{ if eq $section .Name}}class="current"{{ else if eq $currentPage.Name .Name}}class="current"{{ end }}>
+                {{ .Name }}
+            </a>
+        </p>
+        
+        {{ end }}
+    </div>
+    <hr />
+    {{ end }}
+
+</div>
