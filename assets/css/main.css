@@ -17,23 +17,23 @@
 
     /* colour 'theme' */
     /* --col5: #EB5E28; */
-    --col5: #0000FF;
+    --col5:  	#ed3f1c;
     /* --col5a: #BF1F1B; */
-    --col5a: #0000aa;
-    --col4: #252422;
-    --col3: #403D39;
-    --col2b: #868179;
-    --col2a: #9D988E;
+    --col5a: #BF1B1B;
+    --col4: #454240;
+    --col3: #454240;
+    --col2b: #454240;
+    --col2a: #454240;
     --col2: #CCC5B9;
     --col1b: rgba(121, 122, 139, 0.6);
     --col1a: rgba(121, 122, 139, 0.3);
     /* --col1: #FFFCF2; */
-    --col1: #FFF;
-    --border-col: #000088;
+    --col1: #f1f1f1;
+    --border-col: #c6c7c9;
     /* --col1: #b4b5c5; */
-    --black: #00FF00;   /* base black text colour */
+    --black: #414141;   /* base black text colour */
     /* --bq-bg: #FDEADC; */
-    --bq-bg: #f5f5ff;
+    --bq-bg: #c8c8ca;
 
     /* header settings */
     --header-top-gap: 2rem;
@@ -52,19 +52,19 @@
     --font-body-headings: Inter, sans-serif;
     --font-subtitle: 'contempora-script', sans-serif;
     --font-dates: Inter, sans-serif;
-    /*'new-science-extended'*/
-    /*--font-body-settings: */
     --font-body-sans: Inter, sans-serif;
     --font-mono: monospace;
+
+
 
     --h1-margin-top: 3rem;
     --h1-margin-bottom: 2.25rem;
     --h2-margin-top: 3rem;
     --h2-margin-bottom: 1.5rem;
     --h3-margin-top: 3rem;
-    --h3-margin-bottom: 0.5rem;
+    --h3-margin-bottom: 0.75rem;
     --hx-margin-top: 2.5rem;
-    --hx-margin-bottom: 0.2rem;
+    --hx-margin-bottom: 0.75rem;
     --p-margin-top: 0.2rem;
     --p-margin-bottom: 1rem;
     --code-margin-top: 2rem;
@@ -249,7 +249,6 @@ li {
 }
 
 a, a:visited {
-  text-decoration: underline;
   color: var(--col5);
   font-weight: 400;
 
@@ -258,6 +257,7 @@ a, a:visited {
 a:hover {
   /* transition: 0.3s; */
   color: var(--col5a);
+  text-decoration: underline;
 }
 
 a.actionButton, a.actionButton:visited,
@@ -499,6 +499,7 @@ hr {
 
 .site-menu a:hover, .site-menu a:active, .site-menu a.current {
   color: var(--col5a) !important;
+  text-decoration: underline;
 }
 
 .intro h1, .list-container h1 {
@@ -557,7 +558,6 @@ footer span.smaller {
 }
 
 .tag-line {
-  margin-bottom: .5rem;
   display: flex;
   align-items: baseline;
 }
@@ -594,6 +594,7 @@ font-size: 1em;
 
 .tag-title {
   margin: 0;
+  padding-bottom: 12px;
 }
 
 .line-summary {
@@ -688,7 +689,7 @@ font-size: 1em;
 
 .single-summary {
   margin-bottom: 0;
-  color: var(--col2b);
+  color: var(--col3);
 }
 
 .single-content, .list-content {
@@ -952,6 +953,7 @@ figure.img-full {
 }
 
 figcaption {
+  /*
   color: var(--col3);
   padding-left: var(--caption-padding);
   padding-right: var(--caption-padding);
@@ -960,6 +962,16 @@ figcaption {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: var(--strong-body-weight);
+  */
+  color: #5f503e;
+  padding-left: var(--caption-padding);
+  padding-right: var(--caption-padding);
+  font-size: 0.77em;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 550;
+  letter-spacing: 0.03em;
 }
 small {
   width: 100%;
